@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Makerspace Sign In</title>
+  <link rel="stylesheet" href="returning.css" />
+  <style>
+    /* Additional formatting styles */
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    
+    form label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    form input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    
+    form br {
+      display: none;
+    }
+    
+    button {
+      display: block;
+      margin: 20px auto 10px;
+      width: 150px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Makerspace</h1>
+  <form>
+    <label>
+      <input type="checkbox" name="machines" value="3D Printer" />
+      3D Printer
+    </label>
+    <br />
+    <label>
+      <input type="checkbox" name="machines" value="Laser Cutter" />
+      Laser Cutter
+    </label>
+    <br />
+    <label>
+      <input type="checkbox" name="machines" value="CNC Mill" />
+      CNC Mill
+    </label>
+    <br />
+    <label>
+      <input type="checkbox" name="machines" value="Vinyl Cutter" />
+      Vinyl Cutter
+    </label>
+    <br />
+    <button type="submit">Sign In</button>
+  </form>
+</body>
+</html>

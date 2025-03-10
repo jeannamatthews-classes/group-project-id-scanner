@@ -1,0 +1,35 @@
+/* Import base styles */
+@import url("returning.css");
+
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+
+form label {
+  display: inline-block;
+  width: 180px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+form input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ffd700;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+form br {
+  display: none;
+}
+
+form button {
+  display: block;
+  margin: 20px auto 10px;
+  width: 150px;
+  padding: 10px;
+}
