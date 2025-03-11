@@ -1,0 +1,5 @@
+- Drafted the gantt chart
+- Drafted the proposed design document contents
+- Completed most of the design document
+- Completed an ER diagram and relational schema for our database
+- Completed an early draft of our front end HTML/CSS
