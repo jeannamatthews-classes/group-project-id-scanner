@@ -1,0 +1,3 @@
+- 20250309, 60, Researched RFID hardware options
+- 20250313, 90, Met with team to discuss next steps
+- 20250313, 90, Finalized design document sections
