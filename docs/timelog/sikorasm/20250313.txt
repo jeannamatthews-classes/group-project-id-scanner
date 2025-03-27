@@ -1,4 +1,0 @@
--met up with group during time block to discuss assignments, design doc, and github assignment. (1hour 30 minutes)
--disscussed how to complete remaining design document and how to split the work up
--worked on design document (30 minutes)
--worked on github assignment (created subdirectory...etc.) (20 minutes)
