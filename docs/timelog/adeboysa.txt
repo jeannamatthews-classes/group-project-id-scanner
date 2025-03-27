@@ -1,0 +1,11 @@
+# Pre-Spring Break Work 
+- 20250309, 90, Researched RFID hardware options
+- 20250313, 90, Met with team to discuss next steps
+- 20250313, 60, Finalized design document sections
+
+# Post-Spring Break Work
+- 20250315, 30, Created docs/planning/20250315 directory and uploaded updated GANTT chart (hardware setup 100% complete) 
+- 20250324, 30, Updated GANTT chart to reflect hardware delays 
+- 20250326, 20, Updated timelog directory to be a single textfile (moved old entries to adeboysa.txt)
+
+
