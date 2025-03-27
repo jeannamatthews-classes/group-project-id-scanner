@@ -1,0 +1,7 @@
+# Work from before spring break
+- 20250313, 90, Met with team to discuss next steps
+- 20250313, 30, Added some thoughts about admin UI to design doc
+
+# Post-Spring Break Work
+-20250325, 20, emailed Ashley (our user) about hardware that we need
+- 20250326, 10, created this file
