@@ -1,4 +1,0 @@
-- met with teammates during class (03/13) to discuss moving forward with the project (1 hour and 30 min)
-- contributed to design document (wrote blurb about admin UI) (10 min)
-- discussed kinds of hardware that we may need with the team (30 min)
-- drafted an email to our main user, Ashley Sweeney (10 min)
