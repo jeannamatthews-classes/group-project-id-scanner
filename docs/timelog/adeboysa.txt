@@ -7,5 +7,7 @@
 - 20250315, 30, Created docs/planning/20250315 directory and uploaded updated GANTT chart (hardware setup 100% complete) 
 - 20250324, 30, Updated GANTT chart to reflect hardware delays 
 - 20250326, 20, Updated timelog directory to be a single textfile (moved old entries to adeboysa.txt)
+- 20250327, 30, Had a team meeting to discuss hardware delays, updated Gantt chart to reflect completions 
+- 20250328, 30, Our group met with Ashley to get hardware that was purchased(RFID Scanner, Pi 4, POE, and power supply). We will get the rest of the  hardware by next week. I also borrowed a Pi from COSI so I could play around with a few things. 
 
 
