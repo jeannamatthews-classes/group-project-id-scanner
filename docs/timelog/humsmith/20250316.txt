@@ -1,5 +1,0 @@
-- Met with group in person to discuss next steps/phases of project (1 hour 30 minutes)
-- Discussed hardware implementation and UI design with group (30 minutes)
-- Created simple functional server mockup to detect possible technical limitations early on (1 hour)
-- Contributed to design document (15 minutes)
-- Visited makerspace to assess existing hardware implementation (15 minutes)
