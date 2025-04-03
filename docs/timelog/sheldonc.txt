@@ -5,5 +5,14 @@ Before Spring Break:
 - Completed an ER diagram and relational schema for our database
 - Completed an early draft of our front end HTML/CSS
 
+Week Before Spring Break:
+- I left early for a trip, so I put extra time in between 3/11 and 3/13 and did not touch schoolwork afterwards
+    - During that time I completed most of the design document
+    - The design document, DB models, and front end work took significant time - probably 8-10ish hours
+
 Post Spring Break:
-- Changed my timelog directory to be this single text file
+- 5 minutes: Changed my timelog directory to be this single text file
+- 3/24 45 minutes: group meeting
+- 3/27 1 hour: learning about Flask vs Django
+- 3/29 2 hours: researching & learning about backend design
+- 3/30 1.5 hours: restructured our directory, added index.* landing page, and practiced using Flask outside of the directory
