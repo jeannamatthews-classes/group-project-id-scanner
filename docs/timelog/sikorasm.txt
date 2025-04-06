@@ -16,3 +16,6 @@ Post springbreak
 -me and a couple of the group members went to see Ahsley and ask questions about the hardware and a list of items she wants to keep track of
 -we were able to get a majority of the hardware and can start working on more of the project
 -small discussion about what to do next
+
+4/6/25 (1 hour)
+-figuring out what we need to do, we have a couple deadlines to make this week which includes, the Connect & Configure Hardware, Database & Back End, we need to get more stuff for RAPS completed and we still need to do some implementation 
