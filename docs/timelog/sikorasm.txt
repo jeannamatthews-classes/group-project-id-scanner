@@ -17,5 +17,8 @@ Post springbreak
 -we were able to get a majority of the hardware and can start working on more of the project
 -small discussion about what to do next
 
-4/6/25 (1 hour)
--figuring out what we need to do, we have a couple deadlines to make this week which includes, the Connect & Configure Hardware, Database & Back End, we need to get more stuff for RAPS completed and we still need to do some implementation 
+4/6/25 (2 hour)
+-figuring out what we need to do, we have a couple deadlines to make this week which includes, the Connect & Configure Hardware,
+Database & Back End, we need to get more stuff for RAPS completed and we still need to do some implementation 
+-worked on slides by fixing the current ones and organizing them based on the design implemenation doc (need to finish this by tuesday)
+
