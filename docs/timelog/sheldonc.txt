@@ -16,3 +16,5 @@ Post Spring Break:
 - 3/27 1 hour: learning about Flask vs Django
 - 3/29 2 hours: researching & learning about backend design
 - 3/30 1.5 hours: restructured our directory, added index.* landing page, and practiced using Flask outside of the directory
+- 4/3 1 hour: met with group
+- 4/6 2.25 hours: worked on server.py & realized that the file structure is going to change again
