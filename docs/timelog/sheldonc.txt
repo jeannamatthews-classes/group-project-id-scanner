@@ -19,3 +19,4 @@ Post Spring Break:
 - 4/3 1 hour: met with group
 - 4/6 2.25 hours: worked on server.py & realized that the file structure is going to change again
 - 4/7 45 minutes: restructured backend in backend branch & split old server.py into app.py and tables.py
+- 4/7 1 hour: worked on routes/users.py
