@@ -22,3 +22,4 @@ Post Spring Break:
 - 4/7 1 hour: worked on routes/users.py
 - 4/7 2 hours: worked on scans.py and rfid_listener.py, fixed bugs across the entire back end, and merged backend branch
 - 4/7 2.5 hours: debugging across the backend with a special focus on rfid_listener.py and scans.py, though many files were modified
+- 4/8 30 minutes: debugging & addition of root_directory_outlne.txt
