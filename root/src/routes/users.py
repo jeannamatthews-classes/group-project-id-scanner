@@ -8,7 +8,8 @@ NOTE: will not be working until changes are made to newmember.html to reflect th
 
 # src/routes/users.py
 from flask import Blueprint, render_template, request, redirect, url_for
-from src.tables import db, User  # Import the database and User model
+from src.tables import db, User, Scans  # Import the database and User mode
+from datetime import datetime
 
 # Create a Blueprint for user-related routes
 bp = Blueprint('users', __name__, url_prefix='/users')
@@ -37,6 +38,13 @@ def new_user():
         db.session.add(new_user)
         db.session.commit()
 
+        user = User.query.get_or_404(rfid)
+    
+        # Create a new row in scans table with time_out = none
+        visit = Scans(rfid=rfid, date=datetime.today().date(), time_in=datetime.now().time())
+        db.session.add(visit)
+        db.session.commit()
+    
         # After registration, redirect to the same page or another page as desired
         return redirect(url_for('users.new_user'))
 
