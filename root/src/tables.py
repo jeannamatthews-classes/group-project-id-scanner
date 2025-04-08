@@ -1,15 +1,16 @@
-from flask import Flask, render_template, request, redirect, url_for
+"""
+tables
+
+Contains definitions of database tables and sets up the database
+"""
+
+
+
+
 from flask_sqlalchemy import SQLAlchemy  # Lets us interact with the database using Python classes instead of raw SQL
-import os  # Used to construct the path to the SQLite file
 
-app = Flask(__name__)  # Creates the Flask application object
-
-# Configure SQLite database
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))  # Gets the absolute path to the folder
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(BASE_DIR, 'database.db')}"  # Configures database connection
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # Disables a feature we don't need
-
-db = SQLAlchemy(app)  # Creates the database object and links it with the Flask app
+# Create the SQLAlchemy db instance (not bound to an app yet)
+db = SQLAlchemy()
 
 # Table for users
 class User(db.Model):
@@ -53,17 +54,8 @@ class Scans(db.Model):
     def __repr__(self):
         return f"<Scans {self.rfid} on {self.date}>"
 
-# Create the database
-# If database.db already exists, then nothing changes unless new tables are added
-with app.app_context():
-    db.create_all()
-
-# Defines route for homepage (/) that returns a message to confirm the app is running
-@app.route("/")
-def index():
-    return "Database setup complete!"
-
-# Runs Flask development server
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
+# Function to initialize the database with the Flask app
+def init_db(app):
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
