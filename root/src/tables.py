@@ -1,7 +1,7 @@
 """
 tables
 
-Contrains definitions of database tables and sets up the database
+Contains definitions of database tables and sets up the database
 """
 
 

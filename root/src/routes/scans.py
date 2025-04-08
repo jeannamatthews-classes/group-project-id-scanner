@@ -7,13 +7,13 @@ Handles scanning events
 # src/routes/users.py
 from flask import Blueprint, render_template, request, redirect, url_for
 from datetime import datetime
-from src.tables import db, User, Scans, Machine
+from tables import db, User, Scans, Machine
 
 # Create a Blueprint for user-related routes
 bp = Blueprint('scans', __name__, url_prefix='/scan')
 
-@bp.route('/in/<rfid>', methods=['POST'])
-def scan_in():
+@bp.route('/new/<rfid>', methods=['POST'])
+def scan_in(rfid):
     """ Called by rfid_listener.py when an ID is scanned in """
     user = User.query.get_or_404(rfid)
     
@@ -23,7 +23,7 @@ def scan_in():
     db.session.commit()
     return redirect(url_for('index'))
 
-@bp.route('/new', methods=['GET', 'POST'])
+@bp.route('/new/<rfid>', methods=['GET', 'POST'])
 def scan_out(rfid):
     """ Called by rfid_listener at the end of a visit
             - prompt for machines used, then update the row in the scans table """
@@ -33,7 +33,7 @@ def scan_out(rfid):
     
     if request.method == "GET":
         machines = Machine.query.order_by(Machine.name).all()
-        return render_template("returningmember.html", user=user, machines=machines)
+        return render_template("returning.html", user=user, machines=machines)
     
     open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
     if not open_visit:
