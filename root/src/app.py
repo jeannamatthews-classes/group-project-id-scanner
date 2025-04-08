@@ -10,6 +10,7 @@ from flask_sqlalchemy import SQLAlchemy  # Lets us interact with the database us
 import os  # Used to construct the path to the SQLite file
 from tables import init_db  # Import the database initialization function from models.py
 from config import Config
+from routes.scans import bp as scans_bp  # Import the Blueprint from scans.py
 
 # Configure SQLite database
 # I think some of the stuff here belongs in tehe config file
@@ -18,6 +19,9 @@ STATIC_DIR = os.path.join(BASE_DIR, "../static")
 TEMPLATES_DIR = os.path.join(BASE_DIR, "../templates")
 
 app = Flask(__name__, static_folder=STATIC_DIR, template_folder=TEMPLATES_DIR) # Creates the Flask application object
+
+# Register the Blueprint
+app.register_blueprint(scans_bp)
 
 # Configure database
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(BASE_DIR, 'database.db')}"  # Configures database connection
