@@ -15,7 +15,7 @@ bp = Blueprint('scans', __name__, url_prefix='/scan')
 @bp.route('/in/<rfid>', methods=['POST'])
 def scan_in():
     """ Called by rfid_listener.py when an ID is scanned in """
-    user = user.query.get_or_404(rfid)
+    user = User.query.get_or_404(rfid)
     
     # Create a new row in scans table with time_out = none
     visit = Scans(rfid=rfid, date=datetime.today().date(), time_in=datetime.now())
@@ -28,7 +28,8 @@ def scan_out(rfid):
     """ Called by rfid_listener at the end of a visit
             - prompt for machines used, then update the row in the scans table """
             
-    user = user.query.get_or_404(rfid)
+    user = User.query.get_or_404(rfid)
+
     
     if request.method == "GET":
         machines = Machine.query.order_by(Machine.name).all()

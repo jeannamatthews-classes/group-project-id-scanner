@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy  # Lets us interact with the database using Python classes instead of raw SQL
 import os  # Used to construct the path to the SQLite file
 from tables import init_db  # Import the database initialization function from models.py
-from root.src.config import Config
+from config import Config
 
 app = Flask(__name__)  # Creates the Flask application object
 app.config.from_object(Config)
