@@ -20,3 +20,4 @@ Post Spring Break:
 - 4/6 2.25 hours: worked on server.py & realized that the file structure is going to change again
 - 4/7 45 minutes: restructured backend in backend branch & split old server.py into app.py and tables.py
 - 4/7 1 hour: worked on routes/users.py
+- 4/7 2 hours: wokred on scans.py and rfid_listener.py, fixed bugs across the entire back end, and merged backend branch
