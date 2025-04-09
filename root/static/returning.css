@@ -1,32 +1,57 @@
 body {
     font-family: sans-serif;
     margin: 20px;
-    background-color: #fffacd;
+    background-color: #0D433B;
+    color: #FAC922;
+    text-shadow: 2px 2px 2px #665e00;
   }
 
-  h1 {
-    color: #006400;
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+}
 
-  form {
-    margin-top: 10px;
-    border: 2px solid #ffd700;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #fffbe6;
-  }
+form {
+  margin-top: 10px;
+  border: 5px solid #ffd700;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #0D433B;
+  max-width: 500px;
+  margin: 20px auto;
+}
 
-  button {
-    margin-top: 10px;
-    padding: 5px 15px;
-    cursor: pointer;
-    background-color: #006400;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-  }
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+    
+form input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(2.0);
+}
 
-  button:hover {
-    background-color: #228b22;
-  }
+form br{
+  display: none;
+}
+
+button {
+  display: block;
+  margin: 20px auto 10px;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #006400;
+  color: #FAC922;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px #665e00;
+}
+
+button:hover {
+  background-color: #228b22;
+}
