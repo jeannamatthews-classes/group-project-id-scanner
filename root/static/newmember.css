@@ -1,10 +1,23 @@
-/* Import base styles */
-@import url("returning.css");
+body{
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #0D433B;
+  color: #FAC922;
+  text-shadow: 2px 2px 2px #665e00;
+}
 
+h1 {
+  text-align: center;
+}
 
 form {
   max-width: 500px;
   margin: 20px auto;
+  margin-top: 10px;
+  border: 5px solid #ffd700;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #0D433B;
 }
 
 
@@ -27,9 +40,32 @@ form br {
   display: none;
 }
 
-form button {
+form input[type="text"] {
+  background-color: #006400;
+  color: #FAC922;
+}
+
+form input[type="email"] {
+  background-color: #006400;
+  color: #FAC922;
+}
+
+button {
   display: block;
   margin: 20px auto 10px;
-  width: 150px;
-  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #006400;
+  color: #FAC922;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px #665e00;
+}
+
+button:hover {
+  background-color: #228b22;
 }
