@@ -21,7 +21,7 @@ Post springbreak
 4/6/25 (2 hour)
 -figuring out what we need to do, we have a couple deadlines to make this week which includes, the Connect & Configure Hardware,
 Database & Back End, we need to get more stuff for RAPS completed and we still need to do some implementation 
--worked on slides by fixing the current ones and organizing them based on the design implemenation doc (need to finish this by tuesday)
+-worked on google slides by fixing the current ones and organizing them based on the design implemenation doc (need to finish this by tuesday)
 
 4/8/25 (10 minutes)
 -make sure everything is situated for the RAPS slide and submitted the slides
