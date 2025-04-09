@@ -20,7 +20,6 @@ form {
   background-color: #0D433B;
 }
 
-
 form label {
   display: inline-block;
   width: 180px;
@@ -53,11 +52,11 @@ form input[type="email"] {
 button {
   display: block;
   margin: 20px auto 10px;
+  padding: 5px 15px;
   font-weight: bold;
   font-size: 20px;
   width: 200px;
   height: 50px;
-  padding: 5px 15px;
   cursor: pointer;
   background-color: #006400;
   color: #FAC922;
