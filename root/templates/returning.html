@@ -3,37 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Makerspace Sign In</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='returning.css')}}" />
-  <style>
-    /* Additional formatting styles */
-    form {
-      max-width: 500px;
-      margin: 20px auto;
-    }
-    
-    form label {
-      display: block;
-      margin-bottom: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    form input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.2);
-    }
-    
-    form br {
-      display: none;
-    }
-    
-    button {
-      display: block;
-      margin: 20px auto 10px;
-      width: 150px;
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='returningmember.css')}}" />
 </head>
 <body>
   <h1>Thank you for visiting the Makerspace!</h1>
@@ -77,8 +47,7 @@
       <input type="checkbox" name="machines" value="Misc Tools" />
       Misc Tools
     </label>
-    <br />
-    <button type="submit">Submit</button>
   </form>
+  <button type="submit">Submit</button>
 </body>
 </html>
