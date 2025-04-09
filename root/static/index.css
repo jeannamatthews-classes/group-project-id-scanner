@@ -1,13 +1,14 @@
 body {
     font-family: sans-serif;
     margin: 20px;
-    background-color: #FAC922 ;
+    background-color: #0D433B;
     text-align: center;
-  }
+}
   
-  h1 {
-    color: #0D433B;
-    text-align: center;
-    margin: 40px 0;
-    font-size: 10em;
-  }
+h1 {
+  color: #FAC922;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 10em;
+  text-shadow: 6px 6px 2px #665e00;
+}
