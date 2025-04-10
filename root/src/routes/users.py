@@ -20,7 +20,7 @@ def new_user():
     if request.method == 'POST':
         # Retrieve data from the form
         rfid = request.form.get('rfid')
-        student_id = request.form.get('student-id')
+        student_id = request.form.get('student_id')
         username = request.form.get('username')
         first_name = request.form.get('first_name')
         last_name = request.form.get('last_name')
@@ -45,8 +45,13 @@ def new_user():
         db.session.add(visit)
         db.session.commit()
     
-        # After registration, redirect to the same page or another page as desired
-        return redirect(url_for('users.new_user'))
+        # After registration, redirect to landing page
+        return redirect('index.html')
+    
+        # For GET requests, render the registration form
+    else:
+        rfid = request.args.get('rfid')
+        return render_template('newmember.html', rfid=rfid)
 
-    # For GET requests, render the registration form
-    return render_template('newmember.html')
+
+    
