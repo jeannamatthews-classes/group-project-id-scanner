@@ -27,3 +27,8 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -make sure everything is situated for the RAPS slide and submitted the slides
 -Worried about presenation for myself but we got this, it seems the backend is almost finished
 
+4/10/25 (1 hour)
+-figure out who is saying what for RAPS
+-problem with the hardware but we are figuing it out, might not be getting enough power, keeps looping itself
+-talk about what we have done, the scanner taking the RFID and storing the imfomation, along with the signout screen
+-draft for inviting user to RAPS and class presentation
