@@ -11,21 +11,23 @@ import os  # Used to construct the path to the SQLite file
 from tables import init_db  # Import the database initialization function from models.py
 from config import Config
 from routes.scans import bp as scans_bp  # Import the Blueprint from scans.py
+from routes.users import bp as users_bp
 
 # Configure SQLite database
-# I think some of the stuff here belongs in tehe config file
+# I think some of the stuff here belongs in the config file
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "../static")
 TEMPLATES_DIR = os.path.join(BASE_DIR, "../templates")
 
-app = Flask(__name__, static_folder=STATIC_DIR, template_folder=TEMPLATES_DIR) # Creates the Flask application object
+# Creates the Flask application object
+app = Flask(__name__, static_folder=STATIC_DIR, template_folder=TEMPLATES_DIR)
 
 # Register the Blueprint
 app.register_blueprint(scans_bp)
+app.register_blueprint(users_bp)
 
 # Configure database
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(BASE_DIR, 'database.db')}"  # Configures database connection
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # Disables a feature we don't need
+app.config.from_object(Config)
 
 # Initialize the database (binds the models to the app)
 init_db(app)

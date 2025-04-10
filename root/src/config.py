@@ -6,3 +6,4 @@ class Config:
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(BASE_DIR, 'database.db')}"
 
     # More here if needed in development
+    SQLALCHEMY_TRACK_MODIFICATIONS = False  # Disables a feature we don't need
