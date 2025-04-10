@@ -1,0 +1,2 @@
+- We may want to implementa queue to process multiple scan events
+- We need to clear overnight sessions
