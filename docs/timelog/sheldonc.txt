@@ -24,3 +24,4 @@ Post Spring Break:
 - 4/7 2.5 hours: debugging across the backend with a special focus on rfid_listener.py and scans.py, though many files were modified
 - 4/8 30 minutes: debugging & addition of root_directory_outlne.txt
 - 4/10 2 hours: debugging - most effort spent trying to get the rfid_listener to simulate a scan event in the browser
+- 4/10 1.25 hours: met with group - discussed progress & prepared for RAPS
