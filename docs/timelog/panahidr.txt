@@ -4,4 +4,19 @@
 
 # Post-Spring Break Work
 -20250325, 20, emailed Ashley (our user) about hardware that we need
-- 20250326, 10, created this file
+-20250326, 10, created this file
+
+-20250403, 1 hour and 15 minutes:
+Met with team to discuss current stage of the project. Discussed how to fix minimal problems with HTML files, how to use the hardware
+that we have received, and how to proceed with our RAPS presentation. I created the RAPS slide and began updating them with information
+about our project, including both software and hardware. 
+
+-20250405, 2 hours and 30 min:
+I continued updating the RAPS slides with information about our project and focused on properly formatting the slides as well. 
+I also made some tweaks to the HTML files by fixing the Returning Student screen to display the correct stations at the Makerspace. I also
+changed some of the wording on the screens to be more accurate. 
+
+-20240410, 1 hour and 15 minutes:
+Met with team to discuss how we are presenting at RAPS tomorrow. We also discussed some minor issues we are having with our 
+Raspberry Pi (not booting fully). I continued updating the RAPS slides, they are now finalized. I also sent an email to Ashley
+inviting her to our presentations/demos at RAPS and on April 22. 
