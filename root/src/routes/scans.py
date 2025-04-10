@@ -7,12 +7,12 @@ Handles scanning events
 # src/routes/scans.py
 from flask import Blueprint, render_template, request, redirect, url_for
 from datetime import datetime
-from tables import db, User, Scans, Machine
+from tables import db, User, Scans, Machine     # stick to relative imports
 
 # Create a Blueprint for scanning events
 bp = Blueprint('scans', __name__, url_prefix='/scan')
 
-@bp.route('/in/<rfid>', methods=['POST'])
+@bp.route('/in/<rfid>', methods=['GET', 'POST'])
 def scan_in(rfid):
     """Called by the RFID listener when a user scans in.
        Creates a new scan record (with time_out left NULL) and then redirects.

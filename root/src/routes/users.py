@@ -8,7 +8,7 @@ NOTE: will not be working until changes are made to newmember.html to reflect th
 
 # src/routes/users.py
 from flask import Blueprint, render_template, request, redirect, url_for
-from src.tables import db, User, Scans  # Import the database and User mode
+from tables import db, User, Scans  # Import the database and User mode
 from datetime import datetime
 
 # Create a Blueprint for user-related routes

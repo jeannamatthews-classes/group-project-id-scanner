@@ -10,30 +10,41 @@ in a production system.
 """
 
 import sys
+import webbrowser
 from app import app  # Import the Flask app instance from your app.py
 from tables import db, User, Scans  # Import the database and models
 
-def process_rfid(rfid):
-    with app.app_context():
-        user = User.query.get(rfid)
-    
-    with app.test_client() as client:
-        if user:
-            with app.app_context():
-                open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
-            if open_visit:
-                # Simulate a scan_out: perform a GET request to the scan_out endpoint.
-                response = client.get(f"/scan/out/{rfid}")
-            else:
-                # Simulate a scan_in: perform a POST request to the scan_in endpoint.
-                response = client.post(f"/scan/in/{rfid}")
-        else:
-            # User does not exist: simulate accessing the new user registration page.
-            response = client.get(f"/users/new?rfid={rfid}")
-        
-        # Print only minimal output (e.g., the status code) to simulate processing.
-        print(f"Processed RFID {rfid}: HTTP {response.status_code}")
+# Base url of running Flask server
+BASE_URL = "http://localhost:5000"
 
+def process_rfid(rfid):
+    """
+    Queries the db for the rfid
+        if rfid exists
+            if no open session exists, open scan-in URL?
+            else opens scan-out URL
+        else open new member registration page
+    """
+    with app.app_context():
+         user = User.query.get(rfid)
+         open_visit = None
+         if user:
+             open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
+    
+    if user:
+        with app.app_context():
+            if open_visit:
+                url = f"{BASE_URL}/scan/out/{rfid}"
+                print("Opening scanning out page")
+            else:
+                url = f"{BASE_URL}/scan/in/{rfid}"
+                print("Opening scan in page")   #This should just be index.html
+    else:
+        #rfid not found
+        url = f"{BASE_URL}/users/new?rfid={rfid}"
+        print("Opening new member registration page")
+    webbrowser.open(url)
+    
 def main():
     """
     Main loop: repeatedly prompts for an RFID.
