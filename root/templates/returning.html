@@ -7,47 +7,14 @@
 </head>
 <body>
   <h1>Thank you for visiting the Makerspace!</h1>
-  <form>
-    <label>
-      <input type="checkbox" name="machines" value="Soldering Station" />
-      Soldering Station
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Vinyl Station" />
-      Vinyl Station
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Laser Engravers" />
-      Laser Engravers
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Paint Station" />
-      Paint Station
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Woodworking" />
-      Woodworking
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Glass/Jewelry Station" />
-      Glass/Jewelry Station
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Print Your Own" />
-      Print Your Own
-    </label>
-    <br />
-    <label>
-      <input type="checkbox" name="machines" value="Misc Tools" />
-      Misc Tools
-    </label>
+  <form action="{{ url_for(scans.scan_out', rfid.rfid) }}" method="POST">
+    {% for m in machines %}
+      <label>
+        <input type="checkbox" name="machine_ids" value="{{ m.id }}" />
+        {{ m.name }}
+      </label><br>
+    {% endfor %}
+    <button type="submit">Submit</button>
   </form>
-  <button type="submit">Submit</button>
 </body>
 </html>
