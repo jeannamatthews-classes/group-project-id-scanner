@@ -13,6 +13,7 @@ import sys
 import webbrowser
 from app import app  # Import the Flask app instance from your app.py
 from tables import db, User, Scans  # Import the database and models
+from flask import redirect, url_for
 
 # Base url of running Flask server
 BASE_URL = "http://localhost:5000"
@@ -27,6 +28,8 @@ def process_rfid(rfid):
     """
     with app.app_context():
          user = User.query.get(rfid)
+         if not user:   # Any unkown RFID triggers the new member flow gracefully
+             return redirect(url_for('users.new_user', rfid=rfid))
          open_visit = None
          if user:
              open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
