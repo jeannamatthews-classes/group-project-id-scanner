@@ -1,2 +1,4 @@
 - We may want to implementa queue to process multiple scan events
 - We need to clear overnight sessions
+- Need to add startup script to populate machines table
+- Student id & username are unique, which will cause an error if a duplicate is entered
