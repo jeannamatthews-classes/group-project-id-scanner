@@ -8,7 +8,7 @@
 
 <body>
   <h1>New Member Registration</h1>
-  <form action="{{ url_for('users.new') }}" method="POST">
+  <form action="{{ url_for('users.new_user') }}" method="POST">
     <label for="first_name">First Name:</label>
     <input type="text" id="name" name="first_name" required />
     <br />
@@ -18,8 +18,8 @@
     <label for="student_id">Student ID #:</label>
     <input type="text" id="student_id" name="student_id" required />
     <br />
-    <label for="email">University Username:</label>
-    <input type="email" id="email" name="username" required />    <!--type & id may change-->
+    <label for="username">University Username:</label>
+    <input type="text" id="username" name="username" required />    <!--type & id may change-->
     <br />
     <!--signature to be implemented later-->
     <!--<label for="signature">Signature (Waiver):</label>
