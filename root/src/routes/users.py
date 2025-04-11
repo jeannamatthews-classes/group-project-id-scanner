@@ -46,7 +46,7 @@ def new_user():
         db.session.commit()
     
         # After registration, redirect to landing page
-        return redirect('index.html')
+        return redirect(url_for('index.html'))  #abs path for redirection
     
         # For GET requests, render the registration form
     else:
