@@ -26,3 +26,4 @@ Post Spring Break:
 - 4/10 2 hours: debugging - most effort spent trying to get the rfid_listener to simulate a scan event in the browser
 - 4/10 1.25 hours: met with group - discussed progress & prepared for RAPS
 - 4/10 45 minutes: fixing inconsistencies between the database and the new member form
+- 4/11 2 hours: raps and some prep for raps
