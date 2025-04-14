@@ -32,3 +32,11 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -problem with the hardware but we are figuing it out, might not be getting enough power, keeps looping itself
 -talk about what we have done, the scanner taking the RFID and storing the imfomation, along with the signout screen
 -draft for inviting user to RAPS and class presentation
+
+4/11/24 (3 hours)
+-RAPS presentation (2 hour ish)
+-compared to how a lot of people talked about their project, it sounded like we were in a good spot in our group project progress. We do need to start figuring out the hardware soon but once we get that it is more smooth sailing
+-RAPS pitch-off (30 min.)
+-we were tied for 1st place in best in catagory
+-RAPS awards (30 min.)
+-no money won
