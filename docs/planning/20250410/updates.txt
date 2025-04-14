@@ -1,0 +1,4 @@
+- Front end is more or less done
+- Database & back end MVP is mostly complete - mostly testing and debugging left to do
+- Hardware issues wtih pi not booting up need to be solved
+- RAPS presentation is made and prep is done
