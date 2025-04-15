@@ -12,6 +12,23 @@
 - 20250403, 60, Group meeting to discuss RAPS tasks and the need for a micro HDMI. Gave the remaining RFID scanners to Hunter for soldering. Worked on slides. Later that day, I got a breadboard from a friend to see if I could connect the RFID scanner to the PI.
 - 20250404, 10, Picked up wires for connecting RFID Scanner to PI with breadboard. 
 - 20250405, 15, I still had one RFID Scanner with me, so I attempted to connect the RFID scanner to Pi but realized that it didn't work because the header pins had to be soldered(still learning more about this). Will also need a micro HDMI for personal use to connect to Pi. 
+- 20250410
+20250410, 60, Met with team to troubleshoot HDMI/display issues on the Pi
+20250410, 10, Gave HDMI cables and wires to Ron for testing display output
+20250410, 15, Confirmed HDMI cables worked; issue traced to faulty SD card, so Hunter switched to his own
+20250410, 15, Received soldered RFID scanner from Hunter and no longer need breadboard
+20250410, 30, Connected RFID scanner to Pi; unsure if working due to no red light indicator
+20250410, 60, Flashed Raspberry Pi OS to USB and explored Raspberry Pi ecosystem (personal learning goal)
+- 20250411
+20250411, 30, Missed RAPS due to another class presentation but attended awards ceremony after team received top scorer in category
+20250411, 05, Updated GANTT chart to reflect RAPS milestone completion
+- 20250414
+20250414, 15, Reconfigured RFID-to-Pi wiring to verify pin alignment
+20250414, 30, Wrote basic Python script (Write.py) to test RFID scanner behavior
+20250414, 30, Created Read.py to test card detection and data output
+20250414, 15, Confirmed RFID functionality through terminal reads (no red LED visible but scanner works)
+
+
 
 
 
