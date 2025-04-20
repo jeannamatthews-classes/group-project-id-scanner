@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Thank you for visiting the Makerspace!</h1>
-  <form action="{{ url_for(scans.scan_out', rfid.rfid) }}" method="POST">
+  <form action="{{ url_for('scans.scan_out', rfid.rfid) }}" method="POST">
     {% for m in machines %}
       <label>
         <input type="checkbox" name="machine_ids" value="{{ m.id }}" />
