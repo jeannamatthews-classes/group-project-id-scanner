@@ -29,6 +29,7 @@ Post Spring Break:
 - 4/11 2 hours: raps and some prep for raps
 - 4/11 30 minutes: debugging across backend - some issues (with endpoints?) remaining
 - 4/14 15 minutes: updated GANTT chart & meeting progress
+- 4/17 1 hour: met with group - provided some resources for learning about flask and db stuff
 - 4/20 6 hours: implementing a kiosk - most time spent learning instead of doing - some code written outside of repository
 - 4/21 1 hour: troubleshooting rfid reader protocol isssue
 - 4/21 1 hour: fixing remaining bugs in a separate repository - about to bring back to this repository in a new branch
