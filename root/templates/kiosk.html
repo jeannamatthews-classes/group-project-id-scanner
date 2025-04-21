@@ -1,0 +1,48 @@
+<!-- templates/kiosk.html
+     One‑page shell the iPad loads and never leaves.
+     JavaScript polls /api/next_action; when a command arrives it swaps the
+     <iframe> to /users/new, /scan/in/<rfid>, or /scan/out/<rfid>.           -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Makerspace Kiosk</title>
+
+  <!-- full‑window iframe; hide scrollbars -->
+  <style>
+    body, html { margin:0; padding:0; height:100%; overflow:hidden; }
+    iframe     { border:none; width:100%; height:100%; }
+  </style>
+</head>
+
+<body>
+  <!-- The content area: starts at the welcome page -->
+  <iframe id="frame" src="{{ url_for('index') }}"></iframe>
+
+  <script>
+    /* Poll the backend every 1000 ms for the next action */
+    async function poll () {
+      try {
+        const res    = await fetch('/api/next_action');   // ask server
+        const action = await res.json();                  // parse JSON
+
+        if (action.type && action.type !== 'none') {      // something to do
+          const frame = document.getElementById('frame'); // our iframe
+
+          // choose destination based on action.type
+          if      (action.type === 'register') frame.src = '/users/new?rfid=' + action.rfid;
+          else if (action.type === 'scan_in')  frame.src = '/scan/in/'  + action.rfid;
+          else if (action.type === 'scan_out') frame.src = '/scan/out/' + action.rfid;
+
+          // tell server “done” so queue advances
+          await fetch('/api/ack_action', { method: 'POST' });
+        }
+
+      } catch (err) { console.error('kiosk poll error', err); }
+    }
+
+    /* start the 1‑second polling loop */
+    setInterval(poll, 1000);
+  </script>
+</body>
+</html>
