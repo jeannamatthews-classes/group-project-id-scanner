@@ -32,4 +32,7 @@ Post Spring Break:
 - 4/17 1 hour: met with group - provided some resources for learning about flask and db stuff
 - 4/20 6 hours: implementing a kiosk - most time spent learning instead of doing - some code written outside of repository
 - 4/21 1 hour: troubleshooting rfid reader protocol isssue
-- 4/21 1 hour: fixing remaining bugs in a separate repository - about to bring back to this repository in a new branch
+- 4/21 1 hour: fixing remaining bugs in a separate repository - about to bring back to this repository
+- 4/21 3 hours: Updating codebase to work with the kiosk & adding comments
+- 4/21 30 minutes: Recorded demo video
+- 4/21 30 minutes: Edited presentation slides
