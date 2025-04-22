@@ -36,3 +36,4 @@ Post Spring Break:
 - 4/21 3 hours: Updating codebase to work with the kiosk & adding comments
 - 4/21 30 minutes: Recorded demo video
 - 4/21 30 minutes: Edited presentation slides
+- 4/22 15 minutes: Updating gantt chart from last week
