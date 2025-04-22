@@ -37,3 +37,4 @@ Post Spring Break:
 - 4/21 30 minutes: Recorded demo video
 - 4/21 30 minutes: Edited presentation slides
 - 4/22 15 minutes: Updating gantt chart from last week
+- 4/22 30 minutes: Spoke with Ashley and sent her a link to an RFID reader that will work with HID at 125khz
