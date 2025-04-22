@@ -1,66 +1,58 @@
+# src/rfid_listener.py
 """
-rfid_listener.py
-
-Simulated RFID Listener using Flask's test client.
-This script accepts RFID inputs from the command line, queries the database,
-and then calls the appropriate endpoints in your scans and users routes.
-
-No web browsers are opened; this fully simulates the HTTP calls that would occur
-in a production system.
+CLI “badge reader” used during development
+-----------------------------------------
+• Opens the /kiosk page in a browser one time.
+• Waits for you to type an RFID number at the prompt.
+• Looks up that RFID in the database:
+    - new card      → action = register
+    - known, no open visit → action = scan_in
+    - known, open visit    → action = scan_out
+• Sends a JSON packet to /api/trigger_action.
+The kiosk page then switches its iframe accordingly.
 """
 
-import sys
-import webbrowser
-from app import app  # Import the Flask app instance from your app.py
-from tables import db, User, Scans  # Import the database and models
-from flask import redirect, url_for
+import webbrowser                 # to launch the kiosk page
+import requests                   # to hit the Flask JSON API
+from app import app               # Flask application (for DB context)
+from tables import User, Scans, db  # ORM models + session
 
-# Base url of running Flask server
-BASE_URL = "http://localhost:5000"
+BASE_URL = "http://localhost:5000"   # where Flask is listening
 
-def process_rfid(rfid):
-    """
-    Queries the db for the rfid
-        if rfid exists
-            if no open session exists, open scan-in URL?
-            else opens scan-out URL
-        else open new member registration page
-    """
-    with app.app_context():
-         user = User.query.get(rfid)
-         if not user:   # Any unkown RFID triggers the new member flow gracefully
-             return redirect(url_for('users.new_user', rfid=rfid))
-         open_visit = None
-         if user:
-             open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
-    
-    if user:
-        with app.app_context():
-            if open_visit:
-                url = f"{BASE_URL}/scan/out/{rfid}"
-                print("Opening scanning out page")
-            else:
-                url = f"{BASE_URL}/scan/in/{rfid}"
-                print("Opening scan in page")   #This should just be index.html
-    else:
-        #rfid not found
-        url = f"{BASE_URL}/users/new?rfid={rfid}"
-        print("Opening new member registration page")
-    webbrowser.open(url)
-    
-def main():
-    """
-    Main loop: repeatedly prompts for an RFID.
-    Type "exit" to terminate the simulation.
-    """
-    print("RFID Listener Simulation Running (no browsers will open).")
-    print("Type an RFID value or 'exit' to quit.")
+
+def main() -> None:
+    """Simple REPL that turns typed numbers into queue actions."""
+    # Launch the kiosk in the default browser (one tab, reused)
+    webbrowser.open(f"{BASE_URL}/kiosk", new=0, autoraise=True)
+    print("RFID Listener Simulation - type an RFID or 'exit'.")
+
     while True:
-        rfid = input().strip()
-        if rfid.lower() == "exit":
-            print("Exiting simulation.")
+        rfid = input("RFID> ").strip()      # read rfid number
+        if rfid.lower() == "exit":          # quit command
+            print("Goodbye.")
             break
-        process_rfid(rfid)
+        if not rfid:                        # ignore blank lines
+            continue
+
+        # Decide what should happen for this rfid
+        with app.app_context():
+            user = db.session.get(User, rfid)                 # Primary key lookup
+            if user:
+                open_visit = Scans.query.filter_by(
+                    rfid=rfid, time_out=None
+                ).first()                                     # open session?
+                action_type = "scan_out" if open_visit else "scan_in"
+            else:
+                action_type = "register"
+
+        # Ship the instruction to the Flask API
+        payload = {"rfid": rfid, "type": action_type}
+        try:
+            requests.post(f"{BASE_URL}/api/trigger_action", json=payload)
+            print(f"→ queued {action_type} for {rfid}")
+        except Exception as err:
+            print("Could not contact server:", err)
+
 
 if __name__ == "__main__":
     main()
