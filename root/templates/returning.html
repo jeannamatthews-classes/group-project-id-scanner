@@ -1,20 +1,37 @@
+<!-- templates/returning.html
+     Sign‑out screen: user sees a thank‑you + list of machines.
+     Submitting the form POSTs to /scan/out/<rfid>, which closes the visit. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Makerspace Sign In</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='returning.css')}}" />
+  <title>Makerspace Sign-Out</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='returning.css') }}" />
 </head>
+
 <body>
-  <h1>Thank you for visiting the Makerspace!</h1>
-  <form action="{{ url_for('scans.scan_out', rfid.rfid) }}" method="POST">
+  <!-- Personalised greeting; {{ user }} passed in by scans.scan_out (GET) -->
+  <h1>
+    Thank you for visiting the Makerspace{% if user %}, {{ user.first_name }}{% endif %}!
+  </h1>
+
+  <!-- Form posts back to the same route but as POST -->
+  <form action="{{ url_for('scans.scan_out', rfid=user.rfid) }}" method="POST">
+
+    <!-- One checkbox per Machine row injected via loop -->
     {% for m in machines %}
       <label>
-        <input type="checkbox" name="machine_ids" value="{{ m.id }}" />
+        <input type="checkbox" name="machine_ids" value="{{ m.id }}">
         {{ m.name }}
       </label><br>
     {% endfor %}
+
+    <!-- on Submit: scans.scan_out records time_out + machines, then redirects -->
     <button type="submit">Submit</button>
   </form>
 </body>
 </html>
+      
