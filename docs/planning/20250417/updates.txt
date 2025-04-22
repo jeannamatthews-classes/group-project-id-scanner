@@ -1,0 +1,5 @@
+- Not much has changed in the backend
+- A simulation in the command line is needed for the demo in Tuesday
+- Pi boots but rfid reader is the wrong frequency & protocol
+    - Cannot move forward with hardware until we get the right reader
+- Presentation is made for class demo - just lacking the demom video
