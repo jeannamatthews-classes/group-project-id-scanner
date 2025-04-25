@@ -42,3 +42,4 @@ Post Spring Break:
 - 4/24 1 hour: Booted up Pi & installed dependencies - tried runnning the rfid_listener in the terminal on the Pi
 - 4/24 30 minutes: Configured and tested the RFID reader
 - 4/24 5 minutes: Added manuals/presentations directories & added slides from RAPS and the class presentation
+- 4/25 4 hours: Worked on setting up the hostspot on the Pi - most of the setup is complete (I think) but untested
