@@ -1,3 +1,11 @@
-flask
-flask_sqlalchemy
-- there are more... this is incomplete
+Flask>=2.2
+Flask-SQLAlchemy>=3.0
+Flask-Admin>=1.6
+requests>=2.31
+
+# Optional production server
+gunicorn>=21.2
+
+# Do sudo apt install on these for the hotspot
+    # hostapd
+    # dnsmasq
