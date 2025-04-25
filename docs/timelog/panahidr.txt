@@ -20,3 +20,14 @@ changed some of the wording on the screens to be more accurate.
 Met with team to discuss how we are presenting at RAPS tomorrow. We also discussed some minor issues we are having with our 
 Raspberry Pi (not booting fully). I continued updating the RAPS slides, they are now finalized. I also sent an email to Ashley
 inviting her to our presentations/demos at RAPS and on April 22. 
+
+-20240417, 1 hour and 15 minutes:
+Met with team to discuss our final class presentation. Helped with developing and planning the order of our slides for class presentation. 
+Also discussed hardware issues that we're having with the team. Planned the timeline for the rest of our project.
+
+-20240421, 1 hour:
+Watched a couple introductory videos about databases and SQL that Nick put in the drive so that I can better understand the backend
+side of our project. Also reviewed an article in our drive about how to create a Flask application. 
+
+-20240425, 20 min:
+Reviewed features.txt file to see what additional features can be added. Plan to further analyze/work on this over the weekend.
