@@ -38,3 +38,7 @@ Post Spring Break:
 - 4/21 30 minutes: Edited presentation slides
 - 4/22 15 minutes: Updating gantt chart from last week
 - 4/22 30 minutes: Spoke with Ashley and sent her a link to an RFID reader that will work with HID at 125khz
+- 4/24 30 minutes: Picked up Pi and new RFID reader
+- 4/24 1 hour: Booted up Pi & installed dependencies - tried runnning the rfid_listener in the terminal on the Pi
+- 4/24 30 minutes: Configured and tested the RFID reader
+- 4/24 5 minutes: Added manuals/presentations directories & added slides from RAPS and the class presentation
