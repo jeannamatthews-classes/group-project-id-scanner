@@ -29,5 +29,12 @@ Also discussed hardware issues that we're having with the team. Planned the time
 Watched a couple introductory videos about databases and SQL that Nick put in the drive so that I can better understand the backend
 side of our project. Also reviewed an article in our drive about how to create a Flask application. 
 
--20240425, 20 min:
-Reviewed features.txt file to see what additional features can be added. Plan to further analyze/work on this over the weekend.
+-20240425, 45 min:
+Reviewed features.txt file to see what additional features can be added. 
+Plan to further analyze/work on this over the weekend.
+Learned how to create a new branch, then created one called duplicate-fix. 
+Switched to branch duplicate-fix.
+This branch is where my changes will be pushed to ensure that there are no
+duplicates of student ID/name in the database. 
+Deleted an old practice branch I made called duplicate-check, ensuring that
+there are now only the necessary branches in the repo, main and duplicate-fix.
