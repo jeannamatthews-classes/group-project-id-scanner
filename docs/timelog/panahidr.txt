@@ -38,3 +38,8 @@ This branch is where my changes will be pushed to ensure that there are no
 duplicates of student ID/name in the database. 
 Deleted an old practice branch I made called duplicate-check, ensuring that
 there are now only the necessary branches in the repo, main and duplicate-fix.
+
+-20240428, 2 hours:
+Worked in the users.py file to check for duplicates of RFIDs and/or usernames. 
+Spent some time learning git commands, too, as I wasn't entirely sure how branches work and to correctly push to a different branch.
+
