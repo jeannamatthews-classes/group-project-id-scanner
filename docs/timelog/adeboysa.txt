@@ -27,7 +27,23 @@
 20250414, 30, Wrote basic Python script (Write.py) to test RFID scanner behavior
 20250414, 30, Created Read.py to test card detection and data output
 20250414, 15, Confirmed RFID functionality through terminal reads (no red LED visible but scanner works)
-
+20250417, 60, Met with team, talked about a problem with RFID testing. Found out the RC522 reader (13.56MHz) can't read Clarkson IDs because they use 125KHz. Learned it's a frequency mismatch
+20250418, 60, Looked more into RFID frequencies and did more research on types of 125KHz cards
+- 20250421
+20250421, 180 min: Worked on RFID research and getting ready for the final presentation.
+20250421, 45 min: Looked into 125KHz RFID readers like ID12LA, EM-18, and RDM6300.
+20250421, 45 min: Checked if those readers would work and how easy they are to get.
+20250421, 45 min: Found out Clarkson IDs use HID H10301 format at 125KHz; looked for readers that support it.
+20250421, 15 min: Shared with the team that we need an HID-compatible reader.
+20250421, 30 min: Reviewed final presentation slides and added notes for my parts.
+- 20250422, 30 min: Practiced what I’ll say for the final presentation.
+- 20250423, 5 min: Bought an HID-compatible RFID reader for personal testing.
+202504028 (240 min)
+- Worked on connecting the RFID USB reader and updated my timelog.
+- Made a new Git branch for RFID updates.
+- Updated rfid_listener.py to detect when the USB RFID reader is connected or a card is scanned.
+- Made and submitted a pull request for the new RFID code.
+- Logged all this work in my timelog.
 
 
 
