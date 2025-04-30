@@ -2,18 +2,25 @@
 """
 RFID listener using USB input device
 ------------------------------------------
-• Opens the /kiosk page in a browser
+• Opens the /kiosk page in a browser one time.
 • Listens for RFID scans.
 • Tells server to update the action queue.
+• Looks up that RFID in the database:
+    - new card      → action = register
+    - known, no open visit → action = scan_in
+    - known, open visit    → action = scan_out
+• Sends a JSON packet to /api/trigger_action.
+The kiosk page then switches its iframe accordingly.
 """
 
-import requests
+import webbrowser # to launch the kiosk page
+import requests # to hit the Flask JSON API
+from app import app  # Flask application (for DB context)
+from tables import User, Scans, db  # ORM models + session
 from evdev import InputDevice, categorize, ecodes, list_devices
-from app import app
-from tables import User, Scans, db
 
-# important: Use Pi's local ip address (Not localhost if controlling remotely)
-BASE_URL = "http://128.153.180.68:5000"  # Use 127.0.0.1 if running directly on Pi
+# Use Pi IP if running remotely, or localhost if on Pi directly
+BASE_URL = "http://128.153.180.68:5000"  # Change if needed
 
 # Find USB device whose name contains "HID"
 def find_rfid_device():
@@ -46,20 +53,23 @@ def main() -> None:
     if not device:
         print("RFID reader not found. Please check USB connection.")
         return
-
+    # Launch the kiosk in the default browser (one tab, reused)
+    webbrowser.open(f"{BASE_URL}/kiosk", new=0, autoraise=True)
     print("RFID Listener - waiting for badge scans...")
 
     for rfid in read_rfid(device):
         print(f"Scanned RFID: {rfid}")
-
+        
+        # Decide what should happen for this rfid
         with app.app_context():
-            user = db.session.get(User, rfid)
+            user = db.session.get(User, rfid)  # Primary key lookup
             if user:
-                open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first()
+                open_visit = Scans.query.filter_by(rfid=rfid, time_out=None).first() # open session?
                 action_type = "scan_out" if open_visit else "scan_in"
             else:
                 action_type = "register"
 
+        # Ship the instruction to the Flask API
         payload = {"rfid": rfid, "type": action_type}
         try:
             response = requests.post(f"{BASE_URL}/api/trigger_action", json=payload)
