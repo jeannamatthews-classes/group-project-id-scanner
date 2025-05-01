@@ -53,3 +53,6 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -throughout the day we talked about getting the correct RFID scanner along with figure out what our module and type of ID card the school uses
 -making sure everything is prepared for the class presentation with slide and a type of demo
 -attempted to make a flask app for practice under the fold Flask practice for later use in the project
+
+5/1/25 (30 minutes)
+-
