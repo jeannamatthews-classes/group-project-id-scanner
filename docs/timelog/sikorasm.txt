@@ -55,4 +55,4 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -attempted to make a flask app for practice under the fold Flask practice for later use in the project
 
 5/1/25 (30 minutes)
--
+-work on updating the design document in google docs to talk about updated features, and hardware we ended up using
