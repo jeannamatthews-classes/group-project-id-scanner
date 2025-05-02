@@ -10,14 +10,6 @@ import subprocess, time, sys, signal, os, pathlib
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 
-def spawn(cmd, *, background=False):
-    """Helper to run a command relative to project root."""
-    full = [sys.executable, str(BASE_DIR / cmd)]
-    if background:
-        return subprocess.Popen(full)
-    else:
-        subprocess.run(full, check=True)
-
 def main():
     # 1. Add machines
     subprocess.run(str(BASE_DIR / "src/populate_machines.py"), check=True)
