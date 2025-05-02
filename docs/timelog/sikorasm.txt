@@ -63,3 +63,6 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -created a new signout_mid.py to help with the feature that automatically signs a student out if they forgot
 -created a pull request (I don't know if I implemented it correct)
 
+5/2/25 (45 minutes)
+-in google docs I made a new sub folder from the main folder containg the depolyment docs and the user docs. These documents will answer the question that Matthews brough up to put under manuels. I will create the outline and someone else can put it in the doc-timelog- code area
+-finished the User doc for the Manuel doc area. Someone should check over it
