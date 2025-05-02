@@ -1,1 +1,11 @@
+Risk: We’re currently facing a potential issue where the hardware may not work as expected, so we’re on Plan B for now. However, we should be back on track once the right RFID arrives.
+
+Class Presentation: Completed and demoed successfully using Command Line Interface. 
+
+Software: Most of the software is done. We’re now focusing on configuring hardware and software.
+
+RFID: We’ve received the correct RFID scanner and have been working on connecting it to the Pi. 
+The file rfid_listener.py has been updated to now listen for scans from the USB RFID scanner
+
+
 
