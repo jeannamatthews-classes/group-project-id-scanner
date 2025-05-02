@@ -1,0 +1,44 @@
+/* static/admin.css */
+body {
+    font-family: sans-serif;
+    background-color: #0D433B;
+    color: #FAC922;
+    text-align: center;
+  }
+  
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  th, td {
+    border: 1px solid #FAC922;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #006400;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #003c2f;
+  }
+  
+  form {
+    display: inline;
+  }
+  
+  button {
+    background-color: #006400;
+    color: #FAC922;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #228b22;
+  }
+  
