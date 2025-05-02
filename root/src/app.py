@@ -4,6 +4,7 @@ app
 Is the main file that creates and configures the Flask application, and starts the server
 """
 
+from scheduler_setup import setup_scheduler
 from flask import Flask, render_template
 import os
 from config import Config
@@ -40,4 +41,5 @@ def index():
     return render_template("index.html")
 
 if __name__ == "__main__":
+    setup_scheduler(app)
     app.run(host="0.0.0.0", port=5000, debug=True)

@@ -19,6 +19,8 @@ class User(db.Model):
     username = db.Column(db.String(64), unique=True, nullable=False)  # School login username
     first_name = db.Column(db.String(50), nullable=False)  # First name
     last_name = db.Column(db.String(50), nullable=False)  # Last name
+    signature = db.Column(db.String(100), nullable=True) # Digital Signature
+ 
 
     # Debug helper: shows a readable string when a User object is printed
     def __repr__(self):
@@ -45,6 +47,7 @@ class Scans(db.Model):
     date = db.Column(db.Date, nullable=False)  # Date of the scan
     time_in = db.Column(db.Time, nullable=False)  # Time in
     time_out = db.Column(db.Time, nullable=True)  # Time out (nullable for ongoing sessions)
+    was_auto_signed_out = db.Column(db.Boolean, default=False)  # True if auto-signed out by the system
 
     # Many-to-many relationship: each scan can have multiple machines, and each machine can be used in many scans
     machines = db.relationship('Machine', secondary=scan_machine, lazy='subquery',
