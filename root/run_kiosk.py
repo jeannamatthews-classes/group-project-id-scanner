@@ -20,7 +20,7 @@ def main():
 
     try:
         # 3. Run RFID listener (blocking)
-        subprocess.run(str(BASE_DIR / "src/populate_machines.py"), check=True)
+        subprocess.run(str(BASE_DIR / "src/rfid_listener.py"), check=True)
     finally:
         # 4. Kill Flask when listener exits or on Ctrl‑C
         flask_proc.terminate()
