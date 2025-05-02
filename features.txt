@@ -1,5 +1,5 @@
 Reamining features to implement
-- Automatically detect when a student forgets to sign out and do it for them automatically at midnight
+- Automatically detect when a student forgets to sign out and do it for them automatically at midnight (sam might have done)
 - Page that allows admin to:
     - select what data they want exported as a csv
     - make modifications to the db, such as adding a machine
