@@ -20,7 +20,7 @@ class User(db.Model):
     first_name = db.Column(db.String(50), nullable=False)  # First name
     last_name = db.Column(db.String(50), nullable=False)  # Last name
     signature = db.Column(db.String(100), nullable=True) # Digital Signature
- 
+
 
     # Debug helper: shows a readable string when a User object is printed
     def __repr__(self):
@@ -52,6 +52,8 @@ class Scans(db.Model):
     # Many-to-many relationship: each scan can have multiple machines, and each machine can be used in many scans
     machines = db.relationship('Machine', secondary=scan_machine, lazy='subquery',
                                backref=db.backref('scans', lazy=True))
+
+    user = db.relationship("User", backref="scans")
 
     # Debug helper: shows a readable string when a Scans object is printed
     def __repr__(self):

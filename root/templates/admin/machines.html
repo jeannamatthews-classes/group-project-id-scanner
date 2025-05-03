@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h2>Machine Management</h2>
+
+<form method="POST" action="{{ url_for('admin.add_machine') }}">
+  <input type="text" name="name" placeholder="New Machine Name" required>
+  <button type="submit">Add Machine</button>
+</form>
+
+<table>
+  <tr><th>ID</th><th>Name</th><th>Action</th></tr>
+  {% for m in machines %}
+  <tr>
+    <td>{{ m.id }}</td>
+    <td>{{ m.name }}</td>
+    <td>
+      <form method="POST" action="{{ url_for('admin.delete_machine', id=m.id) }}" onsubmit="return confirm('Delete this machine?');">
+        <button type="submit">Delete</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

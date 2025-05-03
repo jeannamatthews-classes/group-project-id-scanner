@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h2>Scan Logs</h2>
+<table>
+  <tr>
+    <th>Student Name</th>
+    <th>RFID</th>
+    <th>Date</th>
+    <th>Time In</th>
+    <th>Time Out</th>
+    <th>Machines</th>
+    <th>Auto-Sign Out?</th>
+  </tr>
+  {% for scan in scans %}
+  <tr>
+    <td>{{ scan.user.first_name }} {{ scan.user.last_name }}</td>
+    <td>{{ scan.rfid }}</td>
+    <td>{{ scan.date }}</td>
+    <td>{{ scan.time_in }}</td>
+    <td>{{ scan.time_out or '—' }}</td>
+    <td>{{ scan.machines | map(attribute='name') | join(', ') }}</td>
+    <td>{{ 'Yes' if scan.was_auto_signed_out else 'No' }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

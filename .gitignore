@@ -1,0 +1,16 @@
+root/src/routes/admin/__pycache__/__init__.cpython-311.pyc
+root/src/routes/admin/__pycache__/auth.cpython-311.pyc
+root/src/routes/admin/__pycache__/dashboard.cpython-311.pyc
+root/src/routes/admin/__pycache__/machines.cpython-311.pyc
+root/src/routes/admin/__pycache__/scans.cpython-311.pyc
+root/src/routes/admin/__pycache__/users.cpython-311.pyc
+root/src/__pycache__/app.cpython-311.pyc
+root/src/__pycache__/autosignout.cpython-311.pyc
+root/src/__pycache__/config.cpython-311.pyc
+root/src/__pycache__/scheduler_setup.cpython-311.pyc
+root/src/__pycache__/tables.cpython-311.pyc
+root/src/routes/__pycache__/__init__.cpython-311.pyc
+root/src/routes/__pycache__/admin.cpython-311.pyc
+root/src/routes/__pycache__/kiosk.cpython-311.pyc
+root/src/routes/__pycache__/scans.cpython-311.pyc
+root/src/routes/__pycache__/users.cpython-311.pyc
