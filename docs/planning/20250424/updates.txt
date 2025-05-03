@@ -1,4 +1,4 @@
-Risk: We’re currently facing a potential issue where the hardware may not work as expected, so we’re on Plan B for now. However, we should be back on track once the right RFID arrives.
+Risk: We’re currently facing a potential issue where the hardware may not work as expected, which is one of the key risks we identified, so we’re on Plan B for now. However, we should be back on track once the right RFID arrives.
 
 Class Presentation: Completed and demoed successfully using Command Line Interface. 
 
