@@ -43,3 +43,6 @@ Post Spring Break:
 - 4/24 30 minutes: Configured and tested the RFID reader
 - 4/24 5 minutes: Added manuals/presentations directories & added slides from RAPS and the class presentation
 - 4/25 4 hours: Worked on setting up the hostspot on the Pi - most of the setup is complete (I think) but untested
+- 5/2 3 hours: Continued to work on configuring the Pi - continue to run into problems that I don't understand
+- 5/2 2.5 hours: Got the hotspot to work and now I can connect to the system remotely over wifi - for some reason the backend doesn't seem to be working as anticipated now
+- 5/2 1.5 hours: Added config files to the Pi so that flask and the rfid listener boot up as soon as the pi is powered on
