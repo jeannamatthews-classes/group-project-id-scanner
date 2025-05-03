@@ -24,6 +24,8 @@ def new_user():
         username = request.form.get('username')
         first_name = request.form.get('first_name')
         last_name = request.form.get('last_name')
+        signature = "I Agree"  # or datetime.now().isoformat() if we want a timestamp
+
 
         # Create a new User instance with the submitted data
         new_user = User(
@@ -31,7 +33,8 @@ def new_user():
             student_id=student_id,
             username=username,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
+            signature=signature
         )
 
         # Add the new user to the database session and commit
