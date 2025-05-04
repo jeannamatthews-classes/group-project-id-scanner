@@ -67,7 +67,9 @@ Database & Back End, we need to get more stuff for RAPS completed and we still n
 -in google docs I made a new sub folder from the main folder containg the depolyment docs and the user docs. These documents will answer the question that Matthews brough up to put under manuels. I will create the outline and someone else can put it in the doc-timelog- code area
 -finished the User doc for the Manuel doc area. Someone should check over it
 
-5/3/25 (30 minutes)
+5/3/25 (1 hour minutes)
 -created a maintenance document in google docs
 -need someone to add it to github
 -It feels like we should be done by the deadline tonight but we won't have time to install the hardware in the makerspace
+-checking on last minute stuff
+-uploaded the deployment doc
