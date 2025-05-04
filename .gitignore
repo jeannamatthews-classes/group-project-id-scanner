@@ -18,3 +18,6 @@ root/src/routes/admin/__pycache__/export.cpython-311.pyc
 env/
 root/src/database.db
 src/__pycache__/
+root/src/__pycache__/app.cpython-313.pyc
+root/src/__pycache__/config.cpython-313.pyc
+root/src/__pycache__/tables.cpython-313.pyc
