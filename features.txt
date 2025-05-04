@@ -1,9 +1,0 @@
-Reamining features to implement
-- Automatically detect when a student forgets to sign out and do it for them automatically at midnight (sam might have done)
-- Page that allows admin to:
-    - select what data they want exported as a csv
-    - make modifications to the db, such as adding a machine
-- csv import feature that takes an admin's csv and uses it to modify the db
-
-Other potential issues:
-- Student id & username are unique, which will cause an error if a duplicate is entered
