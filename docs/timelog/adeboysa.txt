@@ -40,13 +40,20 @@
 - 20250423, 5 min: Bought an HID-compatible RFID reader for personal testing.
 202504028 (240 min)
 - Worked on connecting the RFID USB reader and updated my timelog.
-- Made a new Git branch for RFID updates.
+- Made a new Git branch for RFID updates called pi-rfid.
 - Updated rfid_listener.py to detect when the USB RFID reader is connected or a card is scanned.
 - Made and submitted a pull request for the new RFID code.
 - Logged all this work in my timelog.
+20250429 (60 min)
+- Include action to open web browser and launch the kiosk in rfid_listener.py.
+- Update requirements.txt to include evdev package.
+20250501, 60, Add basic admin page to be able to view users in database.
+20250502 (120 min)
+- Update requirements.txt to include Flask-APScheduler and APScheduler.
+- Add scheduler setup and auto sign-out functionality.
+20250503, 60, Refactor subprocess calls in run_kiosk.py and add waiver functionality in newmember.html and waiver.js
+20250503, 5 hours, Add usage count display to machines page, Implement admin pages with user, machine, and scan logs; add basic login page and sidebar menu, adding final touches, worked a little bit on csv export feature, updated gantt chart to reflect completions, updated design doc to reflect final UI
 
-
-
-
+END OF PROJECT
 
 
