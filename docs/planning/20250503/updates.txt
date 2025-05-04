@@ -1,1 +1,15 @@
+Changes:
+Tasks 5.1 ("Test System in Makerspace") and 5.2 ("Make Permanent Installment of the System") have been removed due to time constraints. The system is functional in its current setup, so no further testing or installation is required. If we had more time, we would have done a testing phase in the MakerSpace. 
 
+Software:
+Most software is complete, and we’re now focusing on final documentation and adding final touches to wrap up the project.
+
+Overall:
+There were significant delays and changes to the timeline, especially with the hardware. However, since we got the new hardware, we've worked hard to bring the project to a good working phase.
+
+Task Updates:
+5.1 and 5.2 have been removed.
+5.3 is 100% complete with a new start date of 4/29/25.
+
+Note:
+This is the final update for the project. All key tasks have been completed, and the project is now in its final phase.
