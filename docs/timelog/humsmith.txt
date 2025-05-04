@@ -1,5 +1,16 @@
-- Met with group in person to discuss next steps/phases of project (1 hour 30 minutes)
-- Discussed hardware implementation and UI design with group (30 minutes)
-- Created simple functional server mockup to detect possible technical limitations early on (1 hour)
-- Contributed to design document (15 minutes)
-- Visited makerspace to assess existing hardware implementation (15 minutes)
+20250313, 90 minutes - Met with group in person to discuss next steps/phases of project
+20250314, 30 minutes - Discussed hardware implementation and UI design with group
+20250322, 60 minutes - Created simple functional server mockup to detect possible technical limitations early on
+20250328, 30 minutes - Met with user to collect hardware and discuss next steps
+20250328, 15 minutes - Contributed to design document
+20250330, 15 minutes - Visited makerspace to assess existing hardware implementation
+20250402, 5 minutes - Picked up hardware from Ignite center.
+20250402, 240 minutes - Worked on setting up pi
+20250410, 20 minutes - Soldered together hardware
+20250410, 75 minutes - Met with group to discuss project status and RAPS. 
+20250410, 15 minutes - Worked on RAPS presentation
+20250411, 180 minutes - RAPS 
+20250417, 75 minutes - Met with group to discuss hardware and planning. 
+20250503, 60 minutes - Worked on finalizing documents
+20250504, 60 minutes - Worked on finalizing documents
+20250504, 60 minutes - Completed csv export feature
