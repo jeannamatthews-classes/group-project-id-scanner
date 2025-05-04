@@ -6,8 +6,9 @@ from . import admin_bp
 @admin_bp.route("/machines")
 def view_machines():
     machines = Machine.query.order_by(Machine.name).all()
-    return render_template("admin/machines.html", machines=machines)
-
+    usage_counts = {m.id: len(m.scans) for m in machines}
+    return render_template("admin/machines.html", machines=machines, usage_counts=usage_counts)
+    
 @admin_bp.route("/machines/add", methods=["POST"])
 def add_machine():
     name = request.form.get("name")
@@ -25,3 +26,4 @@ def delete_machine(id):
         db.session.delete(machine)
         db.session.commit()
     return redirect(url_for("admin.view_machines"))
+

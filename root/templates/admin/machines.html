@@ -8,11 +8,12 @@
 </form>
 
 <table>
-  <tr><th>ID</th><th>Name</th><th>Action</th></tr>
+  <tr><th>ID</th><th>Name</th><th>Usage Count</th><th>Action</th></tr>
   {% for m in machines %}
   <tr>
     <td>{{ m.id }}</td>
     <td>{{ m.name }}</td>
+    <td>{{ usage_counts[m.id] }}</td>
     <td>
       <form method="POST" action="{{ url_for('admin.delete_machine', id=m.id) }}" onsubmit="return confirm('Delete this machine?');">
         <button type="submit">Delete</button>
