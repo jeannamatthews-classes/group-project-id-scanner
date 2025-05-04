@@ -2,6 +2,10 @@ Flask>=2.2
 Flask-SQLAlchemy>=3.0
 Flask-Admin>=1.6
 requests>=2.31
+# or evdev==1.9.1
+evdev
+Flask-APScheduler
+APScheduler
 
 # Optional production server
 gunicorn>=21.2

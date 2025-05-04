@@ -1,4 +1,5 @@
-body{
+/* static/newmember.css */
+body {
   font-family: sans-serif;
   margin: 20px;
   background-color: #0D433B;
@@ -35,16 +36,7 @@ form input {
   margin-bottom: 15px;
 }
 
-form br {
-  display: none;
-}
-
 form input[type="text"] {
-  background-color: #006400;
-  color: #FAC922;
-}
-
-form input[type="username"] {
   background-color: #006400;
   color: #FAC922;
 }
@@ -67,4 +59,66 @@ button {
 
 button:hover {
   background-color: #228b22;
+}
+
+/* Fix checkbox and "I Agree" label/button layout inside modal */
+.waiver-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#agreeCheckbox {
+  width: auto; /* override global 250px */
+  margin: 0;
+}
+
+/* Modal container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Scrollbar styling (optional) */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
 }

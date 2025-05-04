@@ -7,3 +7,5 @@ class Config:
 
     # More here if needed in development
     SQLALCHEMY_TRACK_MODIFICATIONS = False  # Disables a feature we don't need
+
+    SECRET_KEY = "test" #  Secret key for Flask sessions (required for login, cookies, etc.)
