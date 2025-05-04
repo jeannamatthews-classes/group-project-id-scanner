@@ -1,0 +1,8 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h2>Export Scan Data</h2>
+<p>This will download a CSV of all scan records.</p>
+<a href="{{ url_for('admin.download_csv') }}">
+  <button>Download CSV</button>
+</a>
+{% endblock %}

@@ -14,3 +14,4 @@ root/src/routes/__pycache__/admin.cpython-311.pyc
 root/src/routes/__pycache__/kiosk.cpython-311.pyc
 root/src/routes/__pycache__/scans.cpython-311.pyc
 root/src/routes/__pycache__/users.cpython-311.pyc
+root/src/routes/admin/__pycache__/export.cpython-311.pyc
